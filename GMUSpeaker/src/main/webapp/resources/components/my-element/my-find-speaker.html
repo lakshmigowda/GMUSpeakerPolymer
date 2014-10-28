@@ -1,0 +1,104 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="find-speaker"> <template>
+<section layout vertical fit>
+	<section layout horizontal>
+
+		<paper-dropdown-menu> <template
+			repeat="{{categories}}"> <paper-item label="{{name}}"></paper-item>
+		</template> </paper-dropdown-menu>
+
+	</section>
+
+</section>
+
+</template> <script>
+	Polymer('find-speaker', {
+		categories : [ {
+			code : 'aging',
+			name : 'Aging'
+		}, {
+			code : 'american-culture',
+			name : 'American Culture'
+		}, {
+			code : 'arts',
+			name : 'Arts'
+		}, {
+			code : 'business-finance',
+			name : 'Business and Finance'
+		}, {
+			code : 'childhood-development-parenting',
+			name : 'Childhood Development and Parenting'
+		}, {
+			code : 'communication',
+			name : 'Communication'
+		}, {
+			code : 'crimeviolence',
+			name : 'Crime/Violence'
+		}, {
+			code : 'economic-development',
+			name : 'Economic Development'
+		}, {
+			code : 'education-teaching',
+			name : 'Education and Teaching'
+		}, {
+			code : 'environment',
+			name : 'Environment'
+		}, {
+			code : 'ethics',
+			name : 'Ethics'
+		}, {
+			code : 'george-mason-university',
+			name : 'George Mason University'
+		}, {
+			code : 'government-politics',
+			name : 'Government and Politics'
+		}, {
+			code : 'history',
+			name : 'History'
+		}, {
+			code : 'human-resource-managementpersonnel',
+			name : 'Human Resource Management/Personnel'
+		}, {
+			code : 'judaic-studies',
+			name : 'Judaic Studies'
+		}, {
+			code : 'law-enforcement',
+			name : 'Law Enforcement'
+		}, {
+			code : 'leadership-career-development',
+			name : 'Leadership and Career Development'
+		}, {
+			code : 'nonprofit-organizations-charities',
+			name : 'Nonprofit Organizations and Charities'
+		}, {
+			code : 'philosophy',
+			name : 'Philosophy'
+		}, {
+			code : 'psychology',
+			name : 'Psychology'
+		}, {
+			code : 'public-policy-the-law',
+			name : 'Public Policy and the Law'
+		}, {
+			code : 'real-estate',
+			name : 'Real Estate'
+		}, {
+			code : 'religion',
+			name : 'Religion'
+		}, {
+			code : 'research',
+			name : 'Research'
+		}, {
+			code : 'safety',
+			name : 'Safety'
+		}, {
+			code : 'transportation',
+			name : 'Transportation'
+		}, {
+			code : 'washington-metropolitan-regional-issues',
+			name : 'Washington Metropolitan Regional Issues'
+		} ],
+
+	});
+</script> </polymer-element>
