@@ -1,45 +1,61 @@
 <link rel="import" href="../polymer/polymer.html">
 
 <polymer-element name="find-speaker"> <template>
-<core-pages selected="0" selectedindex="0" notap id="core_pages">
-<section id="section" active>
+<style>
+#content {
+	background-color: rgb(255, 255, 255);
+}
+
+paper-input {
+	width: 250px;
+}
+
+paper-button.colored {
+	color: #4285f4;
+}
+</style>
+<div id="content">
 	<table>
 		<tbody>
 			<tr>
-				<td colspan="2"><paper-item icon="search" label="Find Speaker"></paper-item></td>
+				<td colspan="5"><paper-item icon="folder-shared"
+						label="Find Speaker"></paper-item></td>
 			</tr>
 			<tr>
-				<td colspan="2"><p>Choose from categories or speakers then
+				<td colspan="5"><p>Choose from categories or speakers then
 						click the "submit" button. As an alternative, you may use keyword
 						search.</p></td>
 			</tr>
 			<tr>
 				<td>Categories:</td>
-				<td><section>
-						<paper-dropdown-menu> <template
-							repeat="{{categories}}"> <paper-item label="{{name}}"></paper-item>
-						</template> </paper-dropdown-menu>
-						<paper-button raised>Submit</paper-button>
-					</section></td>
+				<td><paper-dropdown-menu> <template
+						repeat="{{categories}}"> <paper-item label="{{name}}"></paper-item>
+					</template> </paper-dropdown-menu></td>
+				<td><paper-button raised>Submit</paper-button></td>
+				<td>OR</td>
+				<td><paper-button class="colored">All Categories</paper-button></td>
 			</tr>
 			<tr>
 				<td>Speakers:</td>
-				<td><section>
-						<paper-dropdown-menu> <template
-							repeat="{{speakers}}"> <paper-item label="{{name}}"></paper-item>
-						</template> </paper-dropdown-menu>
-						<paper-button raised>Submit</paper-button>
-					</section></td>
+				<td><paper-dropdown-menu> <template
+						repeat="{{speakers}}"> <paper-item label="{{name}}"></paper-item>
+					</template> </paper-dropdown-menu></td>
+				<td><paper-button raised>Submit</paper-button></td>
+				<td>OR</td>
+				<td><paper-button class="colored">All speakers</paper-button></td>
 			</tr>
 			<tr>
 				<td>Keyword Search:</td>
-				<td><paper-input label="Type keyword"></paper-input> <paper-button
-						raised>Submit</paper-button></td>
+				<td><paper-input multiline floatingLabel label="Type keyword"></paper-input>
+				</td>
+				<td><paper-button raised>Submit</paper-button></td>
+				<td></td>
+				<td></td>
 			</tr>
 		</tbody>
 	</table>
-</section>
-</core-pages> </template> <script>
+</div>
+</template> <script>
 	Polymer('find-speaker', {
 		categories : [ {
 			code : 'aging',

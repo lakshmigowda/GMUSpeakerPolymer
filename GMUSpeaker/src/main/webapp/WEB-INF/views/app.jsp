@@ -13,25 +13,32 @@
 <script src="/GMUSpeaker/resources/js/jquery-2.1.1.js"></script>
 <script src="/GMUSpeaker/resources/components/platform/platform.js"></script>
 <link rel="import"
+	href="/GMUSpeaker/resources/components/font/roboto.html">
+<link rel="import"
 	href="/GMUSpeaker/resources/components/core-elements/core-elements.html">
 <link rel="import"
 	href="/GMUSpeaker/resources/components/paper-elements/paper-elements.html">
 <script src="/GMUSpeaker/resources/js/home.js"></script>
 <link rel="import"
 	href="/GMUSpeaker/resources/components/my-element/my-find-speaker.html">
+<style>
+body {
+	font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+}
+</style>
 </head>
 
 <body>
 	<core-scaffold> <core-header-panel navigation flex
 		mode="seamed"> <core-toolbar>GMU
-	Speaker</core-toolbar> <core-menu theme="core-light-theme"> <core-item
-		id="home" icon="home" label="Home"></core-item> <core-item
-		id="findseaker" icon="folder-shared" label="Find a speaker"></core-item>
-	<core-item id="requestspeaker" icon="drive-file-rename"
-		label="Request a speaker"></core-item> <core-item id="becomespeaker"
-		icon="add-box" label="Become a speaker"></core-item> <core-item
-		id="faq" icon="question-answer" label="FAQs"></core-item> <core-item
-		id="search" icon="search" label="Search"></core-item> </core-menu> </core-header-panel>
+	Speaker</core-toolbar> <core-menu theme="core-light-theme"> <paper-item
+		id="home" icon="home" label="Home"></paper-item> <paper-item
+		id="findseaker" icon="folder-shared" label="Find a speaker"></paper-item>
+	<paper-item id="requestspeaker" icon="drive-file-rename"
+		label="Request a speaker"></paper-item> <paper-item id="becomespeaker"
+		icon="add-box" label="Become a speaker"></paper-item> <paper-item
+		id="faq" icon="question-answer" label="FAQs"></paper-item> <paper-item
+		id="search" icon="search" label="Search"></paper-item> </core-menu> </core-header-panel>
 
 	<div tool id="message">Welcome!</div>
 	<div id="result"></div>
