@@ -17,6 +17,8 @@
 <link rel="import"
 	href="/GMUSpeaker/resources/components/paper-elements/paper-elements.html">
 <script src="/GMUSpeaker/resources/js/home.js"></script>
+<link rel="import"
+	href="/GMUSpeaker/resources/components/my-element/my-find-speaker.html">
 </head>
 
 <body>
