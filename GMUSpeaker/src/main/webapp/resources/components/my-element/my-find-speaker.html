@@ -3,10 +3,43 @@
 <polymer-element name="find-speaker"> <template>
 <section layout vertical fit>
 	<section layout horizontal>
+		<table>
+			<tbody>
+				<tr>
+					<td colspan="2"><paper-item icon="search" label="Find Speaker"></paper-item></td>
+				</tr>
+				<tr>
+					<td colspan="2"><p>Choose from categories or speakers then
+							click the "submit" button. As an alternative, you may use keyword
+							search.</p></td>
+				</tr>
+				<tr>
+					<td>Categories:</td>
+					<td><section>
+							<paper-dropdown-menu> <template
+								repeat="{{categories}}"> <paper-item label="{{name}}"></paper-item>
+							</template> </paper-dropdown-menu>
+							<paper-button raised>Submit</paper-button>
+						</section></td>
+				</tr>
+				<tr>
+					<td>Speakers:</td>
+					<td><section>
+							<paper-dropdown-menu> <template
+								repeat="{{speakers}}"> <paper-item label="{{name}}"></paper-item>
+							</template> </paper-dropdown-menu>
+							<paper-button raised>Submit</paper-button>
+						</section></td>
+				</tr>
+				<tr>
+					<td>Keyword Search:</td>
+					<td><paper-input label="Type keyword"></paper-input> <paper-button
+							raised>Submit</paper-button></td>
+				</tr>
+			</tbody>
+		</table>
 
-		<paper-dropdown-menu> <template
-			repeat="{{categories}}"> <paper-item label="{{name}}"></paper-item>
-		</template> </paper-dropdown-menu>
+
 
 	</section>
 
@@ -99,6 +132,47 @@
 			code : 'washington-metropolitan-regional-issues',
 			name : 'Washington Metropolitan Regional Issues'
 		} ],
+
+		speakers : [ {
+			code : 'alan-abramson',
+			name : 'Abramson, Alan'
+		}, {
+			code : 'katrin-b-anacker',
+			name : 'Anacker, Katrin B.'
+		}, {
+			code : 'david-anderson',
+			name : 'Anderson, David'
+		}, {
+			code : 'robert-baker',
+			name : 'Baker, Robert'
+		}, {
+			code : 'doris-bitler',
+			name : 'Bitler, Doris'
+		}, {
+			code : 'johanna-bockman',
+			name : 'Bockman, Johanna'
+		}, {
+			code : 'don-boileau',
+			name : 'Boileau, Don'
+		}, {
+			code : 'lucy-boland',
+			name : 'Boland, Lucy'
+		}, {
+			code : 'susan-c-bon',
+			name : 'Bon, Susan C.'
+		}, {
+			code : 'mariama-boney',
+			name : 'Boney, Mariama'
+		}, {
+			code : 'kirk-borne',
+			name : 'Borne, Kirk'
+		}, {
+			code : 'karen-bune',
+			name : 'Bune, Karen'
+		}, {
+			code : 'ted-burnes',
+			name : 'Burnes, Ted'
+		} ]
 
 	});
 </script> </polymer-element>

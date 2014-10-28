@@ -10,31 +10,33 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Homepage!</title>
 
-<script src="/PolymerTest/resources/components/platform/platform.js"></script>
+<script src="/GMUSpeaker/resources/components/platform/platform.js"></script>
 
 
 <link rel="import"
-	href="/PolymerTest/resources/components/core-elements/core-elements.html">
+	href="/GMUSpeaker/resources/components/core-elements/core-elements.html">
 <link rel="import"
-	href="/PolymerTest/resources/components/paper-elements/paper-elements.html">
+	href="/GMUSpeaker/resources/components/paper-elements/paper-elements.html">
 <link rel="import"
-	href="/PolymerTest/resources/components/my-element/my-element.html">
-
-
+	href="/GMUSpeaker/resources/components/my-element/my-find-speaker.html">
 
 </head>
 
 <body>
 	<core-scaffold> <core-header-panel navigation flex
-		mode="seamed"> <core-toolbar>Polymer
-	Test</core-toolbar> <core-menu theme="core-light-theme"> <core-item
-		id="list" icon="list" label="Advertisements"></core-item> <core-item
-		id="create" icon="add-circle" label="Create"></core-item> <core-item
-		id="edit" icon="drive-file-rename" label="Edit"></core-item> <core-item
-		id="delete" icon="delete" label="Delete"></core-item> </core-menu> </core-header-panel>
+		mode="seamed"> <core-toolbar>GMU
+	Speaker</core-toolbar> <core-menu theme="core-light-theme"> <core-item
+		id="home" icon="home" label="Home"></core-item> <core-item
+		id="findseaker" icon="folder-shared" label="Find a speaker"></core-item>
+	<core-item id="requestspeaker" icon="drive-file-rename"
+		label="Request a speaker"></core-item> <core-item id="becomespeaker"
+		icon="add-box" label="Become a speaker"></core-item> <core-item
+		id="faq" icon="question-answer" label="FAQs"></core-item> <core-item
+		id="search" icon="search" label="Search"></core-item> </core-menu> </core-header-panel>
+
 	<div tool id="message">Welcome!</div>
-	<div id="result">
-		<test-tag></test-tag>
+	<div id="result" style="background-color: #FFFFFF">
+		<find-speaker></find-speaker>
 	</div>
 	</core-scaffold>
 </body>
