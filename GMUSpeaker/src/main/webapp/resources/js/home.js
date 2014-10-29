@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	var self = $(this);
 
-	self.findspeaker();
+	self.becomespeaker();
 
 	$("#home").click(function() {
 		self.home();

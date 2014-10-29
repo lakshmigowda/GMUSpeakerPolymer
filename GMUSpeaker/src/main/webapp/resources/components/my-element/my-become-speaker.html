@@ -1,0 +1,209 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="become-speaker"> <template>
+<style>
+#content {
+	background-color: rgb(255, 255, 255);
+}
+
+paper-button[raised].colored {
+	background: #4285f4;
+	color: #fff;
+}
+</style>
+<div id="content">
+
+
+	<table>
+		<tr>
+			<th colspan="4"><paper-item icon="add-box"
+					label="Become Speaker"></paper-item></th>
+		</tr>
+		<tr>
+			<td colspan="4"><p>
+					If you are a current or retired member of Mason s faculty or staff,
+					or a Mason alum, and would like to participate in the Mason
+					Speakers program, please complete the form below. All speakers are
+					involved on a volunteer basis. Speaking engagements are made by the
+					<paper-button> <a
+						href="http://relations.gmu.edu/community-relations/"
+						target="_blank">Office of Community and Local Government
+						Relations </a> </paper-button>
+					and free of charge to community organizations.
+				</p></td>
+		</tr>
+		<tr>
+			<td colspan="4"><p>
+					For more information about the program, or to notify us of a
+					problem with submission of this form, please contact
+					<paper-button> <a href="mailto:sgallag5@gmu.edu"
+						target="_blank">Sarah Gallagher</a> </paper-button>
+					, Mason Speakers Coordinator, via
+					<paper-button> <a href="mailto:sgallag5@gmu.edu"
+						target="_blank">email</a> </paper-button>
+					or by calling (703) 993-8761.
+				</p></td>
+		</tr>
+		<tr>
+			<td>Name:</td>
+			<td><paper-input label="name"></paper-input></td>
+			<td>Mason Employee:</td>
+			<td>NO <paper-toggle-button></paper-toggle-button> YES
+			</td>
+		</tr>
+		<tr>
+			<td>Work Phone:</td>
+			<td><paper-input label="work phone"></paper-input></td>
+			<td>Retired</td>
+			<td>NO <paper-toggle-button></paper-toggle-button> YES
+			</td>
+		</tr>
+		<tr>
+			<td>Home Phone:</td>
+			<td><paper-input label="home phone"></paper-input></td>
+			<td>Mason Alumnus:</td>
+			<td>NO <paper-toggle-button></paper-toggle-button> YES
+			</td>
+		</tr>
+		<tr>
+			<td>Cell Phone:</td>
+			<td><paper-input label="cell phone"></paper-input></td>
+			<td colspan="2">Biography:</td>
+		</tr>
+		<tr>
+			<td>Email:</td>
+			<td><paper-input floatingLabel label="Type an email here"
+					type="email" error="Input is not an email!"></paper-input></td>
+			<td colspan="2" rowspan="2"><paper-input multiline
+					label="Enter biography here" style="height:140px;"></paper-input></td>
+		</tr>
+		<tr>
+			<td>Topic Title:</td>
+			<td><paper-input label="topic title"></paper-input></td>
+		</tr>
+		<tr>
+			<td colspan="4">Categories:</td>
+		</tr>
+		<tr>
+			<td colspan="4"><table>
+					<tr height="40px;">
+						<td><paper-checkbox></paper-checkbox> Aging</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> American Culture</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Arts</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Business & Finance</td>
+					</tr>
+					<tr height="40px;">
+						<td><paper-checkbox></paper-checkbox> Childhood Development &
+							Parenting</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Communication</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Crime/Violence</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Cultural, Social &
+							World Issues</td>
+					</tr>
+					<tr height="40px;">
+						<td><paper-checkbox></paper-checkbox> Economic Development</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Education & Teaching</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Environment</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Ethics</td>
+					</tr>
+					<tr height="40px;">
+						<td><paper-checkbox></paper-checkbox> George Mason University</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Government & Politics</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Health, Nutrition,
+							Exercise & Sports</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> History</td>
+					</tr>
+					<tr height="40px;">
+						<td><paper-checkbox></paper-checkbox> Human Resource
+							Management/Personnel</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Judaic Studies</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Law Enforcement</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Leadership & Career
+							Development</td>
+					</tr>
+					<tr height="40px;">
+						<td><paper-checkbox></paper-checkbox> Literature, Poetry &
+							Writing</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> None</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Nonprofit Organizations
+							& Charities</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Philosophy</td>
+					</tr>
+					<tr height="40px;">
+						<td><paper-checkbox></paper-checkbox> Psychology</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Public Policy & the Law</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Religion</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Safety</td>
+					</tr>
+					<tr height="40px;">
+						<td><paper-checkbox></paper-checkbox> Science, Technology,
+							Engineering & Math</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Transportation</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Washington Metropolitan
+							Regional Issues</td>
+						<td />
+						<td></td>
+					</tr>
+				</table></td>
+		</tr>
+		<tr>
+			<td colspan="4">A/V</td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<table>
+					<tr height="40px;">
+						<td><paper-checkbox></paper-checkbox> Flip Chart</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Internet Acess</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> Laptop</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> LCD Projector</td>
+					</tr>
+					<tr height="40px;">
+						<td><paper-checkbox></paper-checkbox> Screen</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> TV and VCR</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> White Board and Markers</td>
+						<td />
+						<td><paper-checkbox></paper-checkbox> None</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><paper-button raised class="colored">Submit</paper-button></td>
+		</tr>
+	</table>
+</div>
+</template> <script>
+	Polymer('become-speaker', {});
+</script> </polymer-element>

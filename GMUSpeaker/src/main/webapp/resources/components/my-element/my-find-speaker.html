@@ -10,8 +10,9 @@ paper-input {
 	width: 250px;
 }
 
-paper-button.colored {
-	color: #4285f4;
+paper-button[raised].colored {
+	background: #4285f4;
+	color: #fff;
 }
 </style>
 <div id="content">
@@ -31,24 +32,24 @@ paper-button.colored {
 				<td><paper-dropdown-menu> <template
 						repeat="{{categories}}"> <paper-item label="{{name}}"></paper-item>
 					</template> </paper-dropdown-menu></td>
-				<td><paper-button raised>Submit</paper-button></td>
+				<td><paper-button raised class="colored">Submit</paper-button></td>
 				<td>OR</td>
-				<td><paper-button class="colored">All Categories</paper-button></td>
+				<td><paper-button raised>All Categories</paper-button></td>
 			</tr>
 			<tr>
 				<td>Speakers:</td>
 				<td><paper-dropdown-menu> <template
 						repeat="{{speakers}}"> <paper-item label="{{name}}"></paper-item>
 					</template> </paper-dropdown-menu></td>
-				<td><paper-button raised>Submit</paper-button></td>
+				<td><paper-button raised class="colored">Submit</paper-button></td>
 				<td>OR</td>
-				<td><paper-button class="colored">All speakers</paper-button></td>
+				<td><paper-button raised>All speakers</paper-button></td>
 			</tr>
 			<tr>
 				<td>Keyword Search:</td>
 				<td><paper-input multiline floatingLabel label="Type keyword"></paper-input>
 				</td>
-				<td><paper-button raised>Submit</paper-button></td>
+				<td><paper-button raised class="colored">Submit</paper-button></td>
 				<td></td>
 				<td></td>
 			</tr>

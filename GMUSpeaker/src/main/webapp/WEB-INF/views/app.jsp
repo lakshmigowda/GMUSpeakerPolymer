@@ -21,6 +21,8 @@
 <script src="/GMUSpeaker/resources/js/home.js"></script>
 <link rel="import"
 	href="/GMUSpeaker/resources/components/my-element/my-find-speaker.html">
+<link rel="import"
+	href="/GMUSpeaker/resources/components/my-element/my-become-speaker.html">
 <style>
 body {
 	font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
@@ -33,7 +35,7 @@ body {
 		mode="seamed"> <core-toolbar>GMU
 	Speaker</core-toolbar> <core-menu theme="core-light-theme"> <paper-item
 		id="home" icon="home" label="Home"></paper-item> <paper-item
-		id="findseaker" icon="folder-shared" label="Find a speaker"></paper-item>
+		id="findspeaker" icon="folder-shared" label="Find a speaker"></paper-item>
 	<paper-item id="requestspeaker" icon="drive-file-rename"
 		label="Request a speaker"></paper-item> <paper-item id="becomespeaker"
 		icon="add-box" label="Become a speaker"></paper-item> <paper-item
