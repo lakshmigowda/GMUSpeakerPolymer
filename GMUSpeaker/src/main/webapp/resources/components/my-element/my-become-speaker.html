@@ -1,4 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../my-element/my-checkbox.html">
+
 
 <polymer-element name="become-speaker"> <template>
 <style>
@@ -48,21 +50,24 @@ paper-button[raised].colored {
 			<td>Name:</td>
 			<td><paper-input label="name" value="{{name}}"></paper-input></td>
 			<td>Mason Employee:</td>
-			<td>NO <paper-toggle-button></paper-toggle-button> YES
+			<td>NO <paper-toggle-button checked="{{masonemployee}}"></paper-toggle-button>
+				YES
 			</td>
 		</tr>
 		<tr>
 			<td>Work Phone:</td>
 			<td><paper-input label="work phone" value="{{workphone}}"></paper-input></td>
 			<td>Retired</td>
-			<td>NO <paper-toggle-button></paper-toggle-button> YES
+			<td>NO <paper-toggle-button checked="{{retired}}"></paper-toggle-button>
+				YES
 			</td>
 		</tr>
 		<tr>
 			<td>Home Phone:</td>
 			<td><paper-input label="home phone" value="{{homephone}}"></paper-input></td>
 			<td>Mason Alumnus:</td>
-			<td>NO <paper-toggle-button></paper-toggle-button> YES
+			<td>NO <paper-toggle-button checked="{{masonalumnus}}"></paper-toggle-button>
+				YES
 			</td>
 		</tr>
 		<tr>
@@ -88,83 +93,123 @@ paper-button[raised].colored {
 		<tr>
 			<td colspan="4"><table>
 					<tr height="40px;">
-						<td><paper-checkbox></paper-checkbox> Aging</td>
+						<td><my-checkbox label="Aging" value=false
+								on-checked="{{categoryCheckboxClicked}}"></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> American Culture</td>
+						<td><my-checkbox label="Americal culture" value=false
+								on-checked="{{categoryCheckboxClicked}}"></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Arts</td>
+						<td><my-checkbox label="Arts" value=false
+								on-checked="{{categoryCheckboxClicked}}"></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Business & Finance</td>
+						<td><my-checkbox label="Business and Finance" value=false
+								on-checked="{{categoryCheckboxClicked}}"></my-checkbox></td>
 					</tr>
 					<tr height="40px;">
-						<td><paper-checkbox></paper-checkbox> Childhood Development &
-							Parenting</td>
+						<td><my-checkbox label="Childhood Development & Parenting"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Communication</td>
+						<td><my-checkbox label="Communication"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Crime/Violence</td>
+						<td><my-checkbox label="Crime/Violence"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Cultural, Social &
-							World Issues</td>
+						<td><my-checkbox label="Cultural, Social & World Issues"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox></td>
 					</tr>
 					<tr height="40px;">
-						<td><paper-checkbox></paper-checkbox> Economic Development</td>
+						<td><my-checkbox label="Economic Development"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Education & Teaching</td>
+						<td><my-checkbox label="Education & Teaching"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Environment</td>
+						<td><my-checkbox label="Environment"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Ethics</td>
+						<td><my-checkbox label="Ethics"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox></td>
 					</tr>
 					<tr height="40px;">
-						<td><paper-checkbox></paper-checkbox> George Mason University</td>
+						<td><my-checkbox label="George Mason University"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Government & Politics</td>
+						<td><my-checkbox label="Government & Politics"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Health, Nutrition,
-							Exercise & Sports</td>
+						<td><my-checkbox label="Health, Nutrition, Exercise & Sports"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> History</td>
+						<td><my-checkbox label="History"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox></td>
 					</tr>
 					<tr height="40px;">
-						<td><paper-checkbox></paper-checkbox> Human Resource
-							Management/Personnel</td>
+						<td><my-checkbox label="Human Resource Management/Personnel"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Judaic Studies</td>
+						<td><my-checkbox label="Judaic Studies"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Law Enforcement</td>
+						<td><my-checkbox label="Law Enforcement"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Leadership & Career
-							Development</td>
+						<td><my-checkbox label="Leadership & Career Development"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox></td>
 					</tr>
 					<tr height="40px;">
-						<td><paper-checkbox></paper-checkbox> Literature, Poetry &
-							Writing</td>
+						<td><my-checkbox label="Literature, Poetry & Writing"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> None</td>
+						<td><my-checkbox label="None"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Nonprofit Organizations
-							& Charities</td>
+						<td><my-checkbox label="Nonprofit Organizations & Charities"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Philosophy</td>
+						<td><my-checkbox label="Philosophy"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 					</tr>
 					<tr height="40px;">
-						<td><paper-checkbox></paper-checkbox> Psychology</td>
+						<td><my-checkbox label="Psychology"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Public Policy & the Law</td>
+						<td><my-checkbox label="Public Policy & the Law"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Religion</td>
+						<td><my-checkbox label="Religion"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Safety</td>
+						<td><my-checkbox label="Safety"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox></td>
 					</tr>
 					<tr height="40px;">
-						<td><paper-checkbox></paper-checkbox> Science, Technology,
-							Engineering & Math</td>
+						<td><my-checkbox
+								label="Science, Technology, Engineering & Math"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Transportation</td>
+						<td><my-checkbox label="Transportation"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Washington Metropolitan
-							Regional Issues</td>
+						<td><my-checkbox
+								label="Washington Metropolitan Regional Issues"
+								on-checked="{{categoryCheckboxClicked}}" value=false></my-checkbox>
+						</td>
 						<td />
 						<td></td>
 					</tr>
@@ -177,22 +222,30 @@ paper-button[raised].colored {
 			<td colspan="4">
 				<table>
 					<tr height="40px;">
-						<td><paper-checkbox></paper-checkbox> Flip Chart</td>
+						<td><my-checkbox label="Flip Chart"
+								on-checked="{{avCheckboxClicked}}" value=false></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Internet Acess</td>
+						<td><my-checkbox label="Internet Acess"
+								on-checked="{{avCheckboxClicked}}" value=false></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> Laptop</td>
+						<td><my-checkbox label="Laptop"
+								on-checked="{{avCheckboxClicked}}" value=false></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> LCD Projector</td>
+						<td><my-checkbox label="LCD Projector"
+								on-checked="{{avCheckboxClicked}}" value=false></my-checkbox></td>
 					</tr>
 					<tr height="40px;">
-						<td><paper-checkbox></paper-checkbox> Screen</td>
+						<td><my-checkbox label="Screen"
+								on-checked="{{avCheckboxClicked}}" value=false></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> TV and VCR</td>
+						<td><my-checkbox label="TV and VCR"
+								on-checked="{{avCheckboxClicked}}" value=false></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> White Board and Markers</td>
+						<td><my-checkbox label="White Board and Markers"
+								on-checked="{{avCheckboxClicked}}" value=false></my-checkbox></td>
 						<td />
-						<td><paper-checkbox></paper-checkbox> None</td>
+						<td><my-checkbox label="None"
+								on-checked="{{avCheckboxClicked}}" value=false></my-checkbox></td>
 					</tr>
 				</table>
 			</td>
@@ -206,13 +259,37 @@ paper-button[raised].colored {
 	</table>
 	<core-ajax id="ajax" auto="false" method="POST"
 		contentType="application/json" url="/GMUSpeaker/storebecomespeaker"
-		body='{"name":"{{name}}","homePhone":"{{homephone}}","cellPhone":"{{cellphone}}","workPhone":"{{workphone}}","email":"{{email}}","topicTitle":"{{topicTitle}}","biography":"{{biography}}"}'
+		body='{"avs":{{avsList}},"categories":{{categoryList}},"masonEmployee":"{{masonemployee}}","retired":"{{retired}}","masonAlumnus":"{{masonalumnus}}","name":"{{name}}","homePhone":"{{homephone}}","cellPhone":"{{cellphone}}","workPhone":"{{workphone}}","email":"{{email}}","topicTitle":"{{topicTitle}}","biography":"{{biography}}"}'
 		response="{{response}}"> </core-ajax>
 </div>
 </template> <script>
 	Polymer('become-speaker', {
+		categoriesList : "",
+		categories : [],
+		avs : [],
+		avsList : "",
 		doSend : function(event, detail, sender) {
 			this.$.ajax.go();
-		}
+		},
+		categoryCheckboxClicked : function(event, detail, sender) {
+			if (detail.value) {
+				this.categories.push('"' + detail.label + '"');
+			} else {
+				var index = this.categories.indexOf('"' + detail.label + '"');
+				this.categories.splice(index, 1);
+			}
+			this.categoryList = '[' + this.categories + ']';
+			//	alert(this.categories);
+		},
+		avCheckboxClicked : function(event, detail, sender) {
+			if (detail.value) {
+				this.avs.push('"' + detail.label + '"');
+			} else {
+				var index = this.avs.indexOf('"' + detail.label + '"');
+				this.avs.splice(index, 1);
+			}
+			this.avsList = '[' + this.avs + ']';
+			//	alert(this.avs);
+		},
 	});
 </script> </polymer-element>

@@ -1,0 +1,19 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="my-checkbox" attributes="label value">
+<template>
+<style>
+</style>
+<paper-checkbox checked={{value}} on-change="{{onChanged}}"></paper-checkbox>
+{{label}}</template> <script>
+	Polymer('my-checkbox', {
+		value : false,
+		label : "",
+		onChanged : function() {
+			this.fire('checked', {
+				label : this.label,
+				value : this.value
+			});
+		}
+	});
+</script> </polymer-element>

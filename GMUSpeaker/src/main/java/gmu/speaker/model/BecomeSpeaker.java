@@ -1,6 +1,6 @@
 package gmu.speaker.model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class BecomeSpeaker {
 	private String name;
@@ -13,8 +13,8 @@ public class BecomeSpeaker {
 	private boolean retired;
 	private boolean masonAlumnus;
 	private String biography;
-	private ArrayList<String> categories;
-	private ArrayList<String> av;
+	private List<String> categories;
+	private List<String> avs;
 
 	public String getName() {
 		return name;
@@ -96,19 +96,20 @@ public class BecomeSpeaker {
 		this.biography = biography;
 	}
 
-	public ArrayList<String> getCategories() {
+	public List<String> getCategories() {
 		return categories;
 	}
 
-	public void setCategories(ArrayList<String> categories) {
+	public void setCategories(List<String> categories) {
 		this.categories = categories;
 	}
 
-	public ArrayList<String> getAv() {
-		return av;
+	public List<String> getAvs() {
+		return avs;
 	}
 
-	public void setAv(ArrayList<String> av) {
-		this.av = av;
+	public void setAvs(List<String> avs) {
+		this.avs = avs;
 	}
+
 }
