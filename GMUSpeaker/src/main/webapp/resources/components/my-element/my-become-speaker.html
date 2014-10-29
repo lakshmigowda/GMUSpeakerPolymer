@@ -46,40 +46,41 @@ paper-button[raised].colored {
 		</tr>
 		<tr>
 			<td>Name:</td>
-			<td><paper-input label="name"></paper-input></td>
+			<td><paper-input label="name" value="{{name}}"></paper-input></td>
 			<td>Mason Employee:</td>
 			<td>NO <paper-toggle-button></paper-toggle-button> YES
 			</td>
 		</tr>
 		<tr>
 			<td>Work Phone:</td>
-			<td><paper-input label="work phone"></paper-input></td>
+			<td><paper-input label="work phone" value="{{workphone}}"></paper-input></td>
 			<td>Retired</td>
 			<td>NO <paper-toggle-button></paper-toggle-button> YES
 			</td>
 		</tr>
 		<tr>
 			<td>Home Phone:</td>
-			<td><paper-input label="home phone"></paper-input></td>
+			<td><paper-input label="home phone" value="{{homephone}}"></paper-input></td>
 			<td>Mason Alumnus:</td>
 			<td>NO <paper-toggle-button></paper-toggle-button> YES
 			</td>
 		</tr>
 		<tr>
 			<td>Cell Phone:</td>
-			<td><paper-input label="cell phone"></paper-input></td>
+			<td><paper-input label="cell phone" value="{{cellphone}}"></paper-input></td>
 			<td colspan="2">Biography:</td>
 		</tr>
 		<tr>
 			<td>Email:</td>
 			<td><paper-input floatingLabel label="Type an email here"
-					type="email" error="Input is not an email!"></paper-input></td>
+					value="{{email}}" type="email" error="Input is not an email!"></paper-input></td>
 			<td colspan="2" rowspan="2"><paper-input multiline
-					label="Enter biography here" style="height:140px;"></paper-input></td>
+					value="{{biography}}" label="Enter biography here"
+					style="height:140px;"></paper-input></td>
 		</tr>
 		<tr>
 			<td>Topic Title:</td>
-			<td><paper-input label="topic title"></paper-input></td>
+			<td><paper-input label="topic title" value="{{topictitle}}"></paper-input></td>
 		</tr>
 		<tr>
 			<td colspan="4">Categories:</td>
@@ -200,10 +201,18 @@ paper-button[raised].colored {
 			<td></td>
 			<td></td>
 			<td></td>
-			<td><paper-button raised class="colored">Submit</paper-button></td>
+			<td><paper-button on-tap="{{doSend}}" raised class="colored">Submit</paper-button></td>
 		</tr>
 	</table>
+	<core-ajax id="ajax" auto="false" method="POST"
+		contentType="application/json" url="/GMUSpeaker/storebecomespeaker"
+		body='{"name":"{{name}}","homePhone":"{{homephone}}","cellPhone":"{{cellphone}}","workPhone":"{{workphone}}","email":"{{email}}","topicTitle":"{{topicTitle}}","biography":"{{biography}}"}'
+		response="{{response}}"> </core-ajax>
 </div>
 </template> <script>
-	Polymer('become-speaker', {});
+	Polymer('become-speaker', {
+		doSend : function(event, detail, sender) {
+			this.$.ajax.go();
+		}
+	});
 </script> </polymer-element>
