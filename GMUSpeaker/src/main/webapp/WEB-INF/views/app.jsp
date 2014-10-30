@@ -31,6 +31,12 @@ body {
 .externallinks {
 	font-size: 12px;
 	margin-left: 6px;
+	height: 25px;
+}
+
+.search {
+	margin-left: 20px;
+	width: 200px;
 }
 </style>
 </head>
@@ -44,8 +50,9 @@ body {
 	<paper-item id="requestspeaker" icon="drive-file-rename"
 		label="Request a speaker"></paper-item> <paper-item id="becomespeaker"
 		icon="add-box" label="Become a speaker"></paper-item> <paper-item
-		id="faq" icon="question-answer" label="FAQs"></paper-item> <paper-item
-		id="search" icon="search" label="Search"></paper-item> </core-menu>
+		id="faq" icon="question-answer" label="FAQs"></paper-item> <paper-input
+		multiline floatingLabel class="search" label="Search GMU Speaker here"></paper-input>
+	</core-menu>
 
 	<h5 style="margin-left: 15px;">External Links</h5>
 	<core-menu theme="core-light-theme"> <paper-item
