@@ -19,69 +19,139 @@ paper-button[raised].colored {
 
 	<paper-item icon="drive-file-rename" label="Request a speaker"></paper-item>
 
+	<h4 style="margin-left: 20px;">Organization Information</h4>
 	<table>
 		<tr>
-			<th></th>
-			<th></th>
+			<td width="200px">Organization:</td>
+			<td><paper-input label="organization" value="{{organization}}"></paper-input></td>
+			<td width="40px"></td>
+			<td width="200px">Address Line1:</td>
+			<td><paper-input label="address line 1"
+					value="{{organizationaddressline1}}"></paper-input></td>
 		</tr>
 		<tr>
+			<td>Contact Person:</td>
+			<td><paper-input label="contanct person" value="{{orgperson}}"></paper-input></td>
 			<td></td>
-			<td></td>
+			<td>Address Line2:</td>
+			<td><paper-input label="address line 2"
+					value="{{orgaddressline2}}"></paper-input></td>
 		</tr>
 		<tr>
+			<td>Daytime Phone:</td>
+			<td><paper-input label="daytime phone" value="{{daytimephone}}"></paper-input></td>
 			<td></td>
-			<td></td>
+			<td>City:</td>
+			<td><paper-input label="city" value="{{orgcity}}"></paper-input></td>
 		</tr>
 		<tr>
+			<td>Best Phone:</td>
+			<td><paper-input label="on day of event" value="{{bestphone}}"></paper-input></td>
 			<td></td>
-			<td></td>
+			<td>State:</td>
+			<td><paper-input label="state" value="{{orgstate}}"></paper-input></td>
 		</tr>
 		<tr>
+			<td>Email:</td>
+			<td><paper-input label="email" value="{{email}}"></paper-input></td>
 			<td></td>
-			<td></td>
+			<td>Zip:</td>
+			<td><paper-input label="zip" value="{{orgzip}}"></paper-input></td>
 		</tr>
 	</table>
 
+	<h4 style="margin-left: 20px;">Event Information</h4>
 	<table>
 		<tr>
-			<th></th>
-			<th></th>
+			<td width="200px">Date of the event:</td>
+			<td><paper-input label="date" value="{{date}}"></paper-input></td>
+			<td width="40px"></td>
+			<td width="200px">Location:</td>
+			<td><paper-input label="location" value="{{location}}"></paper-input></td>
+		</tr>
+		<tr>
+			<td>Time of the event:</td>
+			<td><paper-input label="time" value="{{time}}"></paper-input></td>
+			<td></td>
+			<td>Room Number:</td>
+			<td><paper-input label="room numer" value="{{roomnumber}}"></paper-input></td>
+		</tr>
+		<tr>
+			<td>Alternate Date of the event:</td>
+			<td><paper-input label="alternate date"
+					value="{{alternatedate}}"></paper-input></td>
+			<td></td>
+			<td>Address Line1:</td>
+			<td><paper-input label="address line 1"
+					value="{{eventaddressline1}}"></paper-input></td>
+		</tr>
+		<tr>
+			<td>Alternate Time of the event:</td>
+			<td><paper-input label="alternate time"
+					value="{{alternatetime}}"></paper-input></td>
+			<td></td>
+			<td>Address Line2:</td>
+			<td><paper-input label="address line 2"
+					value="{{eventaddressline2}}"></paper-input></td>
+		</tr>
+		<tr>
+			<td>Allotted Time for speaker:</td>
+			<td><paper-input label="allotted time" value="{{allottedtime}}"></paper-input></td>
+			<td></td>
+			<td>City:</td>
+			<td><paper-input label="city" value="{{eventcity}}"></paper-input></td>
+		</tr>
+		<tr>
+			<td>Audience Size:</td>
+			<td><paper-input label="size" value="{{size}}"></paper-input></td>
+			<td></td>
+			<td>State:</td>
+			<td><paper-input label="state" value="{{eventstate}}"></paper-input></td>
+		</tr>
+		<tr>
+			<td>Audience Composition:</td>
+			<td><paper-input label="composition" value="{{composition}}"></paper-input></td>
+			<td></td>
+			<td>Zip:</td>
+			<td><paper-input label="zip" value="{{eventzip}}"></paper-input></td>
+		</tr>
+		<tr>
+			<td>Requested Topic:</td>
+			<td><paper-input label="topic" value="{{requestedtopic}}"></paper-input></td>
+			<td></td>
+			<td>Public parking available:</td>
+			<td>NO <paper-toggle-button checked="{{parking}}"></paper-toggle-button>
+				YES
+			</td>
+		</tr>
+		<tr>
+			<td>Alternate Topic 1:</td>
+			<td><paper-input label="topic 1" value="{{alternatetopic1}}"></paper-input></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Alternate Topic 2:</td>
+			<td><paper-input label="topic 2" value="{{alternatetopic2}}"></paper-input></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td colspan="5"><h4 style="margin-left: 20px;">Comments</h4></td>
+		</tr>
+		<tr>
+			<td colspan=5"><paper-input multiline value="{{comments}}"
+					label="Enter comments here" style="height: 180px;width:500px;"></paper-input></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td></td>
-		</tr>
-		<tr>
 			<td></td>
 			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
+			<td align="right"><paper-button on-tap="{{doSend}}" raised
+					class="colored">Submit</paper-button></td>
 		</tr>
 	</table>
 
