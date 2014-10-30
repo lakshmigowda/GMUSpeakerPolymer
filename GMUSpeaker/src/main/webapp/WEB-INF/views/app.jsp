@@ -27,6 +27,11 @@
 body {
 	font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
 }
+
+.externallinks {
+	font-size: 12px;
+	margin-left: 6px;
+}
 </style>
 </head>
 
@@ -40,7 +45,24 @@ body {
 		label="Request a speaker"></paper-item> <paper-item id="becomespeaker"
 		icon="add-box" label="Become a speaker"></paper-item> <paper-item
 		id="faq" icon="question-answer" label="FAQs"></paper-item> <paper-item
-		id="search" icon="search" label="Search"></paper-item> </core-menu> </core-header-panel>
+		id="search" icon="search" label="Search"></paper-item> </core-menu>
+
+	<h5 style="margin-left: 15px;">External Links</h5>
+	<core-menu theme="core-light-theme"> <paper-item
+		class="externallinks" label="Student"> <a
+		href="http://www.gmu.edu/resources/students/" target="_blank"></a> </paper-item> <paper-item
+		class="externallinks" label="Faculty & Staff"> <a
+		href="http://www.gmu.edu/resources/facstaff/" target="_blank"></a> </paper-item> <paper-item
+		class="externallinks" label="Visitors & Maps"> <a
+		href="http://www.gmu.edu/resources/visitors/" target="_blank"></a> </paper-item> <paper-item
+		class="externallinks" label="Today@Mason"> <a
+		href="http://today.gmu.edu" target="_blank"></a> </paper-item> <paper-item
+		class="externallinks" label="Careers"> <a
+		href="http://hr.gmu.edu/employment/" target="_blank"></a> </paper-item> <paper-item
+		class="externallinks" label="My Mason"> <a
+		href="http://mymason.gmu.edu/" target="_blank"></a> </paper-item> <paper-item
+		class="externallinks" label="People finder"> <a
+		href="http://peoplefinder.gmu.edu/" target="_blank"></a> </paper-item> </core-menu></core-header-panel>
 
 	<div tool id="message">Welcome!</div>
 	<div id="result"></div>
