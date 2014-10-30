@@ -12,17 +12,11 @@
 <title>GMU Speaker Application</title>
 <script src="/GMUSpeaker/resources/js/jquery-2.1.1.js"></script>
 <script src="/GMUSpeaker/resources/components/platform/platform.js"></script>
-<link rel="import"
-	href="/GMUSpeaker/resources/components/font/roboto.html">
-<link rel="import"
-	href="/GMUSpeaker/resources/components/core-elements/core-elements.html">
-<link rel="import"
-	href="/GMUSpeaker/resources/components/paper-elements/paper-elements.html">
 <script src="/GMUSpeaker/resources/js/home.js"></script>
 <link rel="import"
-	href="/GMUSpeaker/resources/components/my-element/my-find-speaker.html">
+	href="/GMUSpeaker/resources/components/my-element/my-elements.html">
 <link rel="import"
-	href="/GMUSpeaker/resources/components/my-element/my-become-speaker.html">
+	href="/GMUSpeaker/resources/components/font/roboto.html">
 <style>
 body {
 	font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
